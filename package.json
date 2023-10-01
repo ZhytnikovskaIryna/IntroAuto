@@ -1,5 +1,5 @@
 {
-  "name": "IntroAuto",
+  "name": "introauto",
   "version": "1.0.0",
   "description": "New clean repository for automation intro module",
   "main": "index.js",
@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "Iryna Zhytnikovska",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhytnikovskaIryna/IntroAuto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZhytnikovskaIryna/IntroAuto/issues"
+  },
+  "homepage": "https://github.com/ZhytnikovskaIryna/IntroAuto#readme"
 }
