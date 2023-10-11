@@ -1,4 +1,3 @@
 # IntroAuto
-Task1 done -  WDIO tests. 
-5 test scenarios using CSS and XPath selectors
-POM is implemented
+Task2 done -  WDIO tests with basic commands and custom click method is added. 
+

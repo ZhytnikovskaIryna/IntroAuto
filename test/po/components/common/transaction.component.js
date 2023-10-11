@@ -9,6 +9,7 @@ class TransactionComponent extends BaseComponent{
         const selectors = {
             addTransaction:"//button[@id='addexpense']",
             modal:"//div[@id='addexpenseDialog']",
+            date: "#datepicker",
         };
         return this.rootEl.$(selectors[param]);
     }

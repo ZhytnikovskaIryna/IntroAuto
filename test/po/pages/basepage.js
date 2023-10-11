@@ -8,5 +8,7 @@ class BasePage{
     open(){
         return browser.url(this.url);
     }
+
+    
 }
 module.exports = BasePage;
