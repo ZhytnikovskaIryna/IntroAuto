@@ -1,4 +1,4 @@
-const BaseComponent = require("./base.component");
+const BaseComponent = require("../base.component");
 
 class TransactionComponent extends BaseComponent{
     constructor(){

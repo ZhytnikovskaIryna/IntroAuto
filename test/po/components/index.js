@@ -1,5 +1,5 @@
 const SideMenu = require('./common/sidemenu.component');
-const Transaction = require ('./common/transaction.component');
+const Transaction = require ('./common/transactions/transaction.component');
 module.exports = {
     SideMenu,
     Transaction,
