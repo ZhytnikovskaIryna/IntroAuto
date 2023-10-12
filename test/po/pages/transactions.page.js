@@ -1,13 +1,16 @@
 const BasePage = require("./basepage");
-const {Transaction}=require('./../components')
+const {Transaction, DeleteTransaction}=require('./../components');
+const {AddTransaction}=require('./../components');
+const {DeleteTransactionDialog}=require('./../components');
 
 class TransactionsPage extends BasePage{
    constructor(){
       super("/showcase/javascript/expensetracker/#/expense");
       this.transaction = new Transaction();
+      this.addTransaction = new AddTransaction();
+      this.deleteTransactionDialog = new DeleteTransactionDialog();
 
       browser.addCommand("waitAndClick", async function () {
-        // `this` is return value of $(selector)
         await this.waitForDisplayed()
         await this.click()
     }, true)

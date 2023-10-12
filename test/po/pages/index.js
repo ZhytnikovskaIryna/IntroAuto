@@ -1,3 +1,4 @@
+const { DeleteTransaction } = require("../components");
 const HomePage = require("./home.page");
 const TransactionsPage = require("./transactions.page");
 
@@ -8,7 +9,7 @@ const TransactionsPage = require("./transactions.page");
 function pages(name){
     const items ={
         home: new HomePage(),
-        transactions: new TransactionsPage()
+        transactions: new TransactionsPage(),
     }
     return items[name.toLowerCase()];
 }
