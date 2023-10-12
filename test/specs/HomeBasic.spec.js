@@ -2,8 +2,12 @@
 const{pages}=require('./../po');
 
 describe("Basic tests for Expense Tracker home page",()=> {
-    it("Verify title of the page",async()=>{
+
+    beforeEach(async function () {
         await pages('home').open();
+      });
+
+    it("Verify title of the page",async()=>{
         const pageTitle = await browser.getTitle();
         expect(pageTitle).toEqual("Essential JS 2 for JavaScript (ES5) - Expense Tracker");
     })
