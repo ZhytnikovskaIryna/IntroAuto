@@ -27,9 +27,9 @@ describe("Basic tests for Expense Tracker Transaction page",()=> {
         await transactionPage.open();
         const count = await transactionPage.transaction.item('itemsCount').getText();    
         await transactionPage.transaction.item('row1');
-        await transactionPage.transaction.item('checkbox').click();
-        await transactionPage.transaction.DeleteTransactionBtn.click();
-        await transactionPage.deleteTransactionDialog.DeleteDialogOkButton.click();
+        await transactionPage.transaction.item('checkbox').waitAndClick();
+        await transactionPage.transaction.DeleteTransactionBtn.waitAndClick();
+        await transactionPage.deleteTransactionDialog.DeleteDialogOkButton.waitAndClick();
         expect(await transactionPage.transaction.item('itemsCount').getText()).toEqual("("+(parseInt(count.slice(1,-7))-1).toString()+" items)")
     })
 
@@ -38,9 +38,9 @@ describe("Basic tests for Expense Tracker Transaction page",()=> {
         await transactionPage.open();
         const count = await transactionPage.transaction.item('itemsCount').getText();    
         await transactionPage.transaction.item('row1');
-        await transactionPage.transaction.item('checkbox').click();
-        await transactionPage.transaction.DeleteTransactionBtn.click();
-        await transactionPage.deleteTransactionDialog.DeleteDialogCancelButton.click();
+        await transactionPage.transaction.item('checkbox').waitAndClick();
+        await transactionPage.transaction.DeleteTransactionBtn.waitAndClick();
+        await transactionPage.deleteTransactionDialog.DeleteDialogCancelButton.waitAndClick();
         expect(await transactionPage.transaction.item('itemsCount').getText()).toEqual(count);
     })
 

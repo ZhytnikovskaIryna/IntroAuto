@@ -10,11 +10,8 @@ class TransactionsPage extends BasePage{
       this.addTransaction = new AddTransaction();
       this.deleteTransactionDialog = new DeleteTransactionDialog();
 
-      browser.addCommand("waitAndClick", async function () {
-        await this.waitForDisplayed()
-        await this.click()
-    }, true)
-      
+ 
+     
    }
 
 }
