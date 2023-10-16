@@ -24,6 +24,7 @@ class TransactionComponent extends BaseComponent{
             row1: '[aria-rowindex="0"]',
             checkbox:".e-gridchkbox",
             search :"#txt",
+            description: ".description-section",
         };
         return this.rootEl.$(selectors[param]);
     }
