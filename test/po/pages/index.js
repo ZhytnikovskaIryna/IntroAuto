@@ -1,4 +1,4 @@
-const { DeleteTransaction } = require("../components");
+//const { DeleteTransaction } = require("../components");
 const HomePage = require("./home.page");
 const TransactionsPage = require("./transactions.page");
 

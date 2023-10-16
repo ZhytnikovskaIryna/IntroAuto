@@ -19,12 +19,11 @@ class TransactionComponent extends BaseComponent{
    
     item(param){
         const selectors = {
-            //addTransaction:"//button[@id='addexpense']",
             modal:"//div[@id='addexpenseDialog']",
-            date: "#datepicker",
             itemsCount: ".e-pagecountmsg",
             row1: '[aria-rowindex="0"]',
             checkbox:".e-gridchkbox",
+            search :"#txt",
         };
         return this.rootEl.$(selectors[param]);
     }
