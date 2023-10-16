@@ -25,6 +25,7 @@ class TransactionComponent extends BaseComponent{
             itemsCount: ".e-pagecountmsg",
             row1: '[aria-rowindex="0"]',
             checkbox:".e-gridchkbox",
+            description: ".description-section",
         };
         return this.rootEl.$(selectors[param]);
     }

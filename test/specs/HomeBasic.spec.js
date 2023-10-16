@@ -20,7 +20,7 @@ describe("Basic tests for Expense Tracker home page",()=> {
         await pages('home').sideMenu.item('transactions').click();
         const elem = await pages('transactions').transaction.AddNewTransactionBtn;
         await elem.waitForDisplayed();
-        expect(await elem.isDisplayed()).toEqual(true);
+        await expect(await elem.isDisplayed()).toEqual(true);
 
     })
 
@@ -28,7 +28,7 @@ describe("Basic tests for Expense Tracker home page",()=> {
         await pages('home').sideMenu.item('about').click();
         const elem = await $('.about-heading');
         await elem.waitForDisplayed();
-        expect(await elem.isDisplayed()).toEqual(true);
+        await expect(await elem.isDisplayed()).toEqual(true);
 
     })
 })
