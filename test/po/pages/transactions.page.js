@@ -1,5 +1,5 @@
 const BasePage = require("./basepage");
-const {Transaction, DeleteTransaction}=require('./../components');
+const {Transaction}=require('./../components');
 const {AddTransaction}=require('./../components');
 const {DeleteTransactionDialog}=require('./../components');
 

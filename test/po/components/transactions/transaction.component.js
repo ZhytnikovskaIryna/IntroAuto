@@ -19,7 +19,6 @@ class TransactionComponent extends BaseComponent{
    
     item(param){
         const selectors = {
-            //addTransaction:"//button[@id='addexpense']",
             modal:"//div[@id='addexpenseDialog']",
             date: "#datepicker",
             itemsCount: ".e-pagecountmsg",
