@@ -45,6 +45,6 @@ describe("Basic tests for Expense Tracker Transaction page",()=> {
         await transactionPage.addTransaction.input('description').setValue('description random');
         await transactionPage.addTransaction.addButton.waitAndClick();
         const descr = await transactionPage.transaction.item('description').getText();
-        await expect(await descr).toEqual('description random');
+        await expect(descr).toEqual('description random');
     })
 })

@@ -8,6 +8,7 @@ class HomeComponent extends BaseComponent{
     item(param){
         const selectors = {
             balance_graph:"#balance_Series_0_Point_5_Symbol",
+            
         };
         return this.rootEl.$(selectors[param]);
     }
