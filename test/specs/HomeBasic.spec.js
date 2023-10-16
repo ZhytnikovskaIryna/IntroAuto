@@ -9,11 +9,11 @@ describe("Basic tests for Expense Tracker home page",()=> {
 
     it("Verify title of the page",async()=>{
         const pageTitle = await browser.getTitle();
-        expect(pageTitle).toEqual("Essential JS 2 for JavaScript (ES5) - Expense Tracker");
+        await expect(pageTitle).toEqual("Essential JS 2 for JavaScript (ES5) - Expense Tracker");
     })
 
     it("Verify that balance is displayed in side menu",async()=>{
-        expect(await pages('home').sideMenu.balance.getText()).toEqual("$5,240");
+        await expect(await pages('home').sideMenu.balance.getText()).toEqual("$5,240");
     })
 
     it("Verify that Transaction tab is opened when this menu option is selected",async()=>{
