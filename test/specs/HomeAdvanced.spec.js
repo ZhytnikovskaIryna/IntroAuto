@@ -1,7 +1,6 @@
+const{pages}=require('./../po');
 
-const{pages}=require('../po');
-
-describe("Advnced tests for Expense Tracker home page",()=> {
+describe("Advanced tests for Expense Tracker home page",()=> {
 
     beforeEach(async function () {
         homePage = await pages('home');
@@ -15,7 +14,7 @@ describe("Advnced tests for Expense Tracker home page",()=> {
         );
     })
 
-    it("Verify Color of TRansaction button in SideMenu on mouse over ",async()=>{
+    it("Verify Color of Transaction button in SideMenu on mouse over ",async()=>{
         const elem = await pages('home').sideMenu.item('transactions');
         await elem.moveTo();
         const color = await elem.getCSSProperty('background');

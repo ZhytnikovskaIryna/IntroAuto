@@ -1,7 +1,6 @@
+const{pages}=require('./../po');
 
-const{pages}=require('../po');
-
-describe("Basic tests for Expense Tracker Transaction page",()=> {
+describe("Advanced tests for Expense Tracker Transaction page",()=> {
 
     beforeEach(async function () {
         transactionPage = await pages('transactions');
