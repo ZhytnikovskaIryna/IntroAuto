@@ -21,7 +21,7 @@ class TransactionComponent extends BaseComponent{
         const selectors = {
             modal:"//div[@id='addexpenseDialog']",
             date: "#datepicker",
-            itemsCount: ".e-pagecountmsg",
+            itemsCount: ".e-pagecountmsg", 
             row1: '[aria-rowindex="0"]',
             checkbox:".e-gridchkbox",
             description: ".description-section",

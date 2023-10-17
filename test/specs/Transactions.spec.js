@@ -7,10 +7,13 @@ describe("Basic tests for Expense Tracker Transaction page",()=> {
         transactionPage = await pages('transactions');
         await transactionPage.open();
       });
+
     it("Verify that modal window is opened when Add transaction is clicked on Transaction page",async()=>{
         await transactionPage.transaction.AddNewTransactionBtn.waitAndClick();
         await transactionPage.transaction.item('modal').waitForDisplayed();
         await expect( await transactionPage.transaction.item('modal').isDisplayed()).toEqual(true);
+        await transactionPage.addTransaction.cancelButton.waitAndClick();
+
     })
 
     it("Verify that new transaction can be added on Transaction page and +1 is add to the total count of transactions ",async()=>{
@@ -45,6 +48,6 @@ describe("Basic tests for Expense Tracker Transaction page",()=> {
         await transactionPage.addTransaction.input('description').setValue('description random');
         await transactionPage.addTransaction.addButton.waitAndClick();
         const descr = await transactionPage.transaction.item('description').getText();
-        await expect(await descr).toEqual('description random');
+        await expect(descr).toEqual('description random');
     })
 })
