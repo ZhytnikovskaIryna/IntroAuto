@@ -2,9 +2,8 @@
 const{pages}=require('./../po');
 
 describe("Basic tests for Expense Tracker home page",()=> {
-
-    beforeEach(async function () {
-        await pages('home').open();
+    beforeEach(async ()=> {
+         await pages('home').open();
       });
 
     it("Verify title of the page",async()=>{
