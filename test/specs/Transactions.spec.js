@@ -18,7 +18,6 @@ describe("Basic tests for Expense Tracker Transaction page",()=> {
         await transactionPage.transaction.AddNewTransactionBtn.waitAndClick();
         await transactionPage.addTransaction.input('amount').setValue('100');
         await transactionPage.addTransaction.addButton.waitAndClick();
-        console.log("THIS IS REAL BUG AT THIS SITE THIS IS WHY THIS SCENARIO IS FAILING");
         await expect(await transactionPage.transaction.item('itemsCount')).toHaveText("("+(parseInt(count.slice(1,-7))+1).toString()+" items)");
     })
 
