@@ -20,4 +20,18 @@ describe("Advanced tests for Expense Tracker home page",()=> {
         const color = await elem.getCSSProperty('background');
         await expect(color.value).toEqual("none 0% 0% auto repeat padding-box border-box scroll rgba(239, 244, 255, 1)")
     })
+    it("Verify Color of About button in SideMenu on mouse over ",async()=>{
+        const elem = await pages('home').sideMenu.item('about');
+        await elem.moveTo();
+        const color = await elem.getCSSProperty('background');
+        await expect(color.value).toEqual("none 0% 0% auto repeat padding-box border-box scroll rgba(239, 244, 255, 1)")
+    })
+
+    it('Verify that cookie can be set return a cookie for me', async () => {
+        await browser.setCookies([
+            {name: 'MyCookie', value: '123'},
+        ])
+        const testCookie = await browser.getCookies(['MyCookie'])
+        expect (testCookie[0].value).toEqual('123');
+    })
 })
