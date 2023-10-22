@@ -34,4 +34,16 @@ describe("Advanced tests for Expense Tracker home page",()=> {
         const testCookie = await browser.getCookies(['MyCookie'])
         expect (testCookie[0].value).toEqual('123');
     })
+
+    it('Local storage', async () => {
+        const key = "localStorageKey";
+        const value = "localStorageValue";
+        await browser.execute(function (key, value) {
+         window.localStorage.setItem(key, value);
+        }, key, value);
+        const readValue = await browser.execute(function (key) {
+        return window.localStorage.getItem(key);
+        }, key);
+        expect (readValue).toEqual("localStorageValue");
+    })
 })
