@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
-/* eslint-disable no-undef */
-import { afterEach } from 'mocha';
+import {
+  afterEach, beforeEach, describe, it,
+} from 'mocha';
 import { expect } from 'chai';
 import NumbersValidator from '../../app/Numbers_Validator.js';
 

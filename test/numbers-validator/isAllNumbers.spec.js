@@ -1,6 +1,9 @@
-import { afterEach } from 'mocha';
+/* eslint-disable import/extensions */
+import {
+  afterEach, beforeEach, describe, it,
+} from 'mocha';
 import { expect } from 'chai';
-import NumbersValidator from '../../app/Numbers_Validator';
+import NumbersValidator from '../../app/Numbers_Validator.js';
 
 describe('isAllNumbers  testing positive and negative scenarios', () => {
   let validator;
