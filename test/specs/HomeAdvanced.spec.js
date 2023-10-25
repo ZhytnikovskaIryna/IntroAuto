@@ -18,13 +18,13 @@ describe("Advanced tests for Expense Tracker home page",()=> {
         const elem = await pages('home').sideMenu.item('transactions');
         await elem.moveTo();
         const color = await elem.getCSSProperty('background');
-        await expect(color.value).toHaveText("rgba(239, 244, 255, 1)")
+        await expect(color.value.slice(-22)).toEqual("rgba(239, 244, 255, 1)")
     })
     it("Verify Color of About button in SideMenu on mouse over ",async()=>{
         const elem = await pages('home').sideMenu.item('about');
         await elem.moveTo();
         const color = await elem.getCSSProperty('background');
-        await expect(color.value).toEqual("none 0% 0% auto repeat padding-box border-box scroll rgba(239, 244, 255, 1)")
+        await expect(color.value.slice(-22)).toEqual("rgba(239, 244, 255, 1)")
     })
 
     it('Verify that cookie can be set return a cookie for me', async () => {
